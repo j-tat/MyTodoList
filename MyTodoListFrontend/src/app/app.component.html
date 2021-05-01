@@ -1,0 +1,28 @@
+<div class="page-container">
+    <header>
+        <span class="left-span"></span>
+        <span class="title"><h1>To-Do List</h1></span>
+        <div class="right-div">
+            <div *ngIf="!currentUser" class="login-div">
+                <button (click)="onLoginClick()" >Log In</button>
+                <button (click)="onRegisterClick()" >Register</button>
+            </div>
+            <div *ngIf="currentUser" class="login-div">
+                <button (click)="onLogoutClick()">Log Out</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content-wrap">
+        <router-outlet></router-outlet>
+        <app-error-message></app-error-message>
+    </div>
+    
+    <footer>
+        <div>
+            <p>© 2021</p>
+        </div>
+    </footer>
+</div>
+
+

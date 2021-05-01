@@ -1,0 +1,42 @@
+.main-div {
+    width: 350px;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    left: -400px;
+    bottom: 75px;
+    padding: 15px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.message-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-animation {
+    visibility: visible;
+    left: 35px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.inner-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.x-button-span {
+    cursor: pointer;
+}
+
+.alert-icon {
+    margin-right: 20px;
+    color: red;
+}

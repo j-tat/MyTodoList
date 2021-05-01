@@ -1,0 +1,9 @@
+<div class="main-div" [ngClass]="{'post-animation': animate, 'hidden': !animate}">
+    <div class="inner-div">
+        <div><i class="fas fa-exclamation-triangle alert-icon"></i></div>
+        <div>{{message}}</div>
+        <div class="x-button-span" (click)="onXButtonClick()">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="main">
+    <h4>Sign up for your account</h4>
+    <div class="login-form-div">
+        <input type="text" name="username" id="username" [(ngModel)]="username" placeholder="Enter username">
+        <input type="password" name="password" id="password" [(ngModel)]="password" placeholder="Enter password" (keyup)="handleKeyUp($event)">
+        <button (click)="onRegisterClick()">Register</button>
+    </div>
+</div>

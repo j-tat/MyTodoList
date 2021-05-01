@@ -1,0 +1,8 @@
+*/.vs
+*/*/obj
+*/*/bin
+bin/
+obj/
+*/*.pubx
+*.pubxml
+*.pubxml.*

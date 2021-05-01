@@ -1,0 +1,102 @@
+.main {
+    width: 55%;
+    margin: auto;
+    margin-top: 5px;
+}
+@media screen and (max-width: 1000px) {
+    .main {
+        width: 95%;
+    }
+}
+
+ul {
+    width: 100%;
+    margin: 0px;
+    list-style: none;
+    font-size: 2em;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+ul li {
+    background-color: #00838f;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    color: white;
+    display: flex;
+    width: 100%;
+}
+
+ul li:nth-child(even) {
+    background-color: #006064;
+}
+
+ul li:hover {
+    background-color: #005662;
+}
+
+.description-completed {
+    text-decoration: line-through;
+}
+
+li:hover {
+    background-color:rgb(167, 170, 180)
+}
+
+.check-incomplete {
+    visibility: hidden;
+}
+
+.new-item {
+    width: 100%;
+    margin: 0px;   
+    box-sizing: border-box;
+}
+
+.new-item input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 2em;
+}
+
+.loading {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+}
+
+.left-col {
+    width: 5%;
+    min-width: 1em;
+    margin: auto;
+    padding-left: 10px;
+    overflow:hidden;
+}
+
+.mid-col {
+    width: 80%;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.right-col {
+    width: 7%;
+    margin: auto;
+    text-align: center;
+}
+
+.x-button:hover {
+    color: #4f83cc;
+}
+
+.empty-message {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}

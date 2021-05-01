@@ -1,0 +1,31 @@
+<div class="loading" *ngIf="isLoading == true">
+    <i class="fas fa-spinner fa-spin"></i>
+</div>
+<div class="loading" *ngIf="isError == true">
+    <span>Oops.</span>
+</div>
+<div class="main" *ngIf="isLoading == false && isError == false">
+    <div class="new-item">
+        <input type="text" (keyup)="handleKeyUp($event)" placeholder="New item"/>
+    </div>
+    <ul *ngIf="items">
+        <li *ngFor="let item of items">
+            <div class="left-col">
+                <span [ngClass]="{'check-span': true, 'check-incomplete': !item.isCompleted}">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
+            <div class="mid-col" [ngClass]="{'description-completed': item.isCompleted}" (click)=onTodoItemClick(item) draggable="true" (dragstart)="onListItemDrag(item)" (dragover)="$event.preventDefault()"   (drop)="onListItemDragOver(item)">
+                {{item.description}}
+            </div>
+            <div class="right-col">
+                <span class="x-button" (click)="onXButtonClick(item)"><i class="fas fa-times"></i></span>
+            </div>
+        </li>
+    </ul>
+    <div class="empty-message" *ngIf="items.length == 0">
+        <strong>Your list is empty.</strong>
+        <br />
+        <strong>Add some items.</strong>
+    </div>
+</div>
