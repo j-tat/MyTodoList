@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // API_URL: "https://joet.dev/mytodolistapi/api"
-  API_URL: "https://localhost:44369/api"
+  API_URL: "https://joet.dev/mytodolistapi/api"
+  // API_URL: "https://localhost:44369/api"
 };
 
 /*

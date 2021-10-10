@@ -37,7 +37,7 @@ namespace MyTodoListApi
 
             services.AddDbContext<MyTodoListContext>(options =>
             {
-                options.UseNpgsql(@"Server=localhost;Database=mytodolist;User Id=mytodolistdev;Password=mytodolistdev;");
+                options.UseNpgsql(@"Server=db;Port=5432;Database=mytodolist;User Id=dev;Password=dev;");
                 //options.UseInMemoryDatabase();
             });
 
@@ -46,7 +46,7 @@ namespace MyTodoListApi
                 options.AddPolicy(name: "_myAllowSpecificOrigins",
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:4200")
+                                      builder.WithOrigins("http://localhost:8070")
                                       //builder.AllowAnyOrigin()
                                       .AllowCredentials()
                                       .AllowAnyHeader()

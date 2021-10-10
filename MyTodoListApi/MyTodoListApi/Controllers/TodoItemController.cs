@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MyTodoListApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TodoItemController : ControllerBase
     {
@@ -14,6 +14,13 @@ namespace MyTodoListApi.Controllers
         public TodoItemController(MyTodoListContext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        [Route("test")]
+        public string Test()
+        {
+            return "test!";
         }
 
         [Authorize]

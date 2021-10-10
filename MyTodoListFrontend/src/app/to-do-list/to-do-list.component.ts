@@ -29,8 +29,9 @@ export class TodoListComponent implements OnInit {
     if(!(this.authenticationService.currentUserValue)) {
       this.router.navigate(['/login']);
     }
-
-    this.getTodoItems();
+    else {
+      this.getTodoItems();
+    }
   }
 
   getTodoItems(): void {

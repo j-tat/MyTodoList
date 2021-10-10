@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MyTodoListApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
