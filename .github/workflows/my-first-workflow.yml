@@ -14,4 +14,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
-      - run: npm install
+      - name: Restore node modules
+        run: npm install
+        working-directory: ./MyTodoListFrontend
